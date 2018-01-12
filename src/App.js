@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Counter from './Counter'
 
 class App extends Component {
-	state = {
-		counter: 0
-	}
-	componentDidMount() {
-		this.setState({
-			counter: 5
-		})
-	}
 	render() {
-
 		return (
-			<div>{this.state.counter}</div>
+			<MuiThemeProvider>
+				<Counter />
+			</MuiThemeProvider>
 		)
 	}
-}
+};
 
-export default App;
+export default App
